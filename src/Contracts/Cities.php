@@ -2,8 +2,8 @@
 
 
 namespace Eskiell\FocusAddress\Contracts;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-interface Role
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+interface Cities
 {
-    public function permissions(): BelongsToMany;
+    public function state(): BelongsTo;
 }

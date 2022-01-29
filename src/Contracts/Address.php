@@ -1,8 +1,8 @@
 <?php
 namespace Eskiell\FocusAddress\Contracts;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-interface Permission
+interface Address
 {
-    public function roles(): BelongsToMany;
+    public function user(): BelongsTo;
 }

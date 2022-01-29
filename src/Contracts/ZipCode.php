@@ -2,8 +2,12 @@
 
 
 namespace Eskiell\FocusAddress\Contracts;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-interface States
+
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
+interface ZipCode
 {
-    public function permissions(): BelongsToMany;
+    public function state(): HasOne;
+
+    public function city(): HasOne;
 }
