@@ -1,0 +1,54 @@
+{
+    "name": "eskiell/focus-address",
+    "description": "focus-address",
+    "keywords": [
+        "eskiell",
+        "focus-address"
+    ],
+    "homepage": "https://github.com/eskiell/focus-address",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Eskiel technology",
+            "email": "eskiel@icloud.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eskiell\\FocusAddress\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eskiell\\FocusAddress\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eskiell\\FocusAddress\\FocusAddressServiceProvider"
+            ],
+            "aliases": {
+                "FocusAddress": "Eskiell\\FocusAddress\\FocusAddressFacade"
+            }
+        }
+    }
+}
