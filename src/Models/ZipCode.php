@@ -14,7 +14,7 @@ class ZipCode extends Model implements \Eskiell\FocusAddress\Contracts\ZipCode
     protected $primaryKey = 'id';
     protected $casts = [
         'id' => 'integer',
-        'code' => 'integer',
+        'cod' => 'integer',
         'street' => 'string',
         'neighborhood' => 'string',
         'city_id' => 'integer',
@@ -22,7 +22,7 @@ class ZipCode extends Model implements \Eskiell\FocusAddress\Contracts\ZipCode
     ];
     protected $fillable = [
         'id',
-        'code',
+        'cod',
         'street',
         'neighborhood',
         'city_id',
