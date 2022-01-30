@@ -6,6 +6,6 @@ trait Address
 {
     public function address()
     {
-        return $this->hasMany(config('focus-permission.models.user'));
+        return $this->hasMany(config('focus-address.models.address'));
     }
 }

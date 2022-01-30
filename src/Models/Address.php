@@ -39,6 +39,6 @@ class Address extends Model implements \Eskiell\FocusAddress\Contracts\Address
 
     public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(config('focus-permission.models.user'));
+        return $this->belongsTo(config('focus-address.models.user'));
     }
 }
