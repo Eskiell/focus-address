@@ -22,11 +22,7 @@ class Address extends Model implements \Eskiell\FocusAddress\Contracts\Address
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',
-        'street' => 'string',
-        'neighborhood' => 'string',
-        'city' => 'string',
-        'state' => 'string',
-        'zip_code' => 'string',
+        'zipcode_id' => 'integer',
         'number' => 'integer',
         'complement' => 'string',
         'type' => 'string'
