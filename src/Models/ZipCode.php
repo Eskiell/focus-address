@@ -34,6 +34,7 @@ class ZipCode extends Model implements \Eskiell\FocusAddress\Contracts\ZipCode
     {
         return config('focus-address.table_names.zipcode', parent::getTable());
     }
+
     protected static function booted()
     {
         static::addGlobalScope(new SortByScope('street', 'ASC'));
@@ -41,11 +42,11 @@ class ZipCode extends Model implements \Eskiell\FocusAddress\Contracts\ZipCode
 
     public function state(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
-        return $this->hasOne(config('focus-address.table_names.states'), 'id', 'state_id');
+        return $this->hasOne(config('focus-address.models.states'), 'id', 'state_id');
     }
 
     public function city(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
-        return $this->hasOne(config('focus-address.table_names.cities'), 'id', 'city_id');
+        return $this->hasOne(config('focus-address.models.cities'), 'id', 'city_id');
     }
 }

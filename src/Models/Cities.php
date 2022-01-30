@@ -37,6 +37,6 @@ class Cities extends Model implements \Eskiell\FocusAddress\Contracts\Cities
 
     public function state(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(config('focus-address.table_names.states'), 'state_id', 'id');
+        return $this->belongsTo(config('focus-address.models.states'), 'state_id', 'id');
     }
 }

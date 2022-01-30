@@ -37,4 +37,9 @@ class Address extends Model implements \Eskiell\FocusAddress\Contracts\Address
     {
         return $this->belongsTo(config('focus-address.models.user'));
     }
+
+    public function zipcode(): \Illuminate\Database\Eloquent\Relations\hasOne
+    {
+        return $this->hasOne(config('focus-address.models.zipcode'), 'id', 'zipcode_id');
+    }
 }

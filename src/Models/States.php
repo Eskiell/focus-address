@@ -29,7 +29,7 @@ class States extends Model implements \Eskiell\FocusAddress\Contracts\States
 
     public function cities(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(config('focus-address.table_names.cities'), 'state_id', 'id');
+        return $this->hasMany(config('focus-address.models.cities'), 'state_id', 'id');
     }
 
     protected static function booted()
